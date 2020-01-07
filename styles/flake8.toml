@@ -1,0 +1,113 @@
+["setup.cfg".flake8]
+
+########## PLUGINS ##########
+# Set the cyclomatic complexity threshold. The default value is 10.
+radon-max-cc = 20
+# Instruct radon to add closures/inner classes to the output
+radon-show-closures = True
+# Instruct radon not to count assert statements towards cyclomatic complexity. The default behaviour is the opposite.
+radon-no-assert = True
+
+# Annotation complexity is maximum annotation nesting level.
+max-annotations-complexity = 5
+########## VERBOSITY ##########
+
+# Increase the verbosity of Flake8’s output.
+verbose = 0
+# Decrease the verbosity of Flake8’s output.
+quiet = 0
+########## FORMATTING ##########
+
+# Select the formatter used to display errors to the user.
+# format = default
+format = wemake
+
+# Print the total number of errors.
+count = True
+# Print the source code generating the error/warning in question.
+show-source = True
+# Count the number of occurrences of each error/warning code and print a report.
+statistics = False
+
+################### FILE PATTERNS ##########################
+
+# Provide a comma-separated list of glob patterns to exclude from checks.
+exclude =
+  # Trash and cache:
+  .git
+  __pycache__
+  .venv
+  .eggs
+  *.egg
+  doc
+  docs
+  tests
+  build
+  dist
+  .ipynb_checkpoints
+  setup.py
+
+# Provide a comma-separate list of glob patterns to include for checks.
+filename =
+    *.py
+
+################### LINTING ################################
+
+########## ENVIRONMENT ##########
+
+# Provide a custom list of builtin functions, objects, names, etc.
+builtins =
+
+########## OPTIONS ##########
+accept-encodings = utf-8
+
+# Report all errors, even if it is on the same line as a `# NOQA` comment.
+disable-noqa = False
+
+# Set the maximum length that any line (with some exceptions) may be.
+max-line-length = 120
+# Set the maximum allowed McCabe complexity value for a block of code.
+max-complexity = 15
+# Toggle whether pycodestyle should enforce matching the indentation of the opening bracket’s line.
+# incluences E131 and E133
+hang-closing = False
+
+# Options for self-checks:
+# maximum line complexity measured in number of `ast` nodes per line, defaults to 14
+max-line-complexity = 18
+# maximum Jones score for a module, which is equal to the median of all lines complexity sum, defaults to 12
+max-jones-score = 12
+
+# max number of functions per module
+max-module-members = 20
+
+# max number of argument of a function
+max-arguments = 10
+
+# max local variables
+max-local-variables = 20
+
+# Forbids to have try blocks with too long bodies.
+max-try-body-length = 7
+
+# Forbids to have functions with too high cognitive complexity
+max-cognitive-score = 20
+
+# Forbids to have modules with too high average cognitive complexity.
+max-cognitive-average = 10
+
+# Forbids placing too many return statements into the function.
+max-returns = 10
+
+# Enable off-by-default extensions.
+enable-extensions = G
+
+########## DOCSTRING ##########
+
+# Enable PyFlakes syntax checking of doctests in docstrings.
+doctests = True
+
+# Specify which files are checked by PyFlakes for doctest syntax.
+include-in-doctest =
+# Specify which files are not to be checked by PyFlakes for doctest syntax.
+exclude-in-doctest =
