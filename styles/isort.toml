@@ -1,0 +1,21 @@
+["setup.cfg".isort]
+# isort configuration:
+# https://github.com/timothycrosley/isort/wiki/isort-Settings
+include_trailing_comma = true
+# See https://github.com/timothycrosley/isort#multi-line-output-modes
+multi_line_output = 3
+default_section = FIRSTPARTY
+line_length = 120
+
+known_standard_library = dataclasses,typing_extensions
+known_first_party = oecd,sigmalib
+known_third_party = xmltodict
+
+combine_as_imports = true
+force_grid_wrap = false
+lines_after_imports = 2
+not_skip = __init__.py
+skip = tests
+import_heading_stdlib=Standard Library
+import_heading_firstparty=My Stuff
+import_heading_thirdparty=External modules
