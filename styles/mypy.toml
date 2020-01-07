@@ -1,4 +1,4 @@
-[mypy]
+["setup.cfg".mypy]
 # mypy configurations: http://bit.ly/2zEl9WI
 
 # Plugins, includes custom:
