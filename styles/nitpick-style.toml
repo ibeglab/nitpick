@@ -5,6 +5,7 @@ minimum_version = "0.21.0"
 include = [
   "mypy.toml",
   "flake8.toml",
+  "pylint.toml",
   "isort.toml",
   "darglint.toml"
 ]
