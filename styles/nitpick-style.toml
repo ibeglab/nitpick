@@ -1,6 +1,10 @@
 [nitpick]
 minimum_version = "0.21.0"
 
+[nitpick.files.present]
+".editorconfig" = ""
+"CHANGELOG2.md" = "A project should have a changelog"
+
 [nitpick.styles]
 include = [
   "mypy.toml",
